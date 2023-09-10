@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type PokemonResponse = {
   name: string;
   url: string;
@@ -17,7 +19,14 @@ export default async function Home() {
       <h1 className="text-2xl font-medium tracking-tight">Pokemon</h1>
       <ul className="mt-6">
         {pokemon.map((pokemon) => (
-          <li key={pokemon.name}>{pokemon.name}</li>
+          <li key={pokemon.name}>
+            <Link
+              href={`/${pokemon.name}`}
+              className="text-blue-600 hover:text-black"
+            >
+              {pokemon.name}
+            </Link>
+          </li>
         ))}
       </ul>
     </main>
