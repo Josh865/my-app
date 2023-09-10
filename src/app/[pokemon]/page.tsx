@@ -18,7 +18,7 @@ export default async function Pokemon({ params }: PageArgs) {
   const pokemon = await fetchPokemon(params.pokemon);
 
   return (
-    <h1 className="text-2xl font-medium tracking-tight">
+    <h1 className="text-xl font-medium tracking-tight">
       {pokemon.name} - {pokemon.height}
     </h1>
   );

@@ -15,8 +15,8 @@ export default async function Home() {
   const pokemon = await fetchPokemon();
 
   return (
-    <main className="container pt-6">
-      <h1 className="text-2xl font-medium tracking-tight">Pokemon</h1>
+    <div className="container py-6">
+      <h1 className="text-xl font-medium tracking-tight">All Pokemon</h1>
       <ul className="mt-6">
         {pokemon.map((pokemon) => (
           <li key={pokemon.name}>
@@ -29,6 +29,6 @@ export default async function Home() {
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }
