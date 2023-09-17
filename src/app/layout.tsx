@@ -24,6 +24,7 @@ export default function RootLayout({
         <header className="border-b bg-zinc-100 py-6">
           <div className="container">
             <div className="text-2xl font-semibold tracking-tight">Pokemon</div>
+            <input />
           </div>
         </header>
 
